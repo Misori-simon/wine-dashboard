@@ -24,12 +24,17 @@
     font-weight: bolder;
 }
 
+.space-btw {
+    justify-content: space-between;
+}
+
 /* utitility classes end */
 main {
-    margin: 15px;
+    margin: 15px auto;
     padding: 10px;
     border: 1px solid rgb(110, 110, 110);
     border-radius: 5px;
+    max-width: 1200px;
 }
 
 /* styling for the side bar begins here */
@@ -40,11 +45,11 @@ main {
     width: 25%;
     max-width: 250px;
     float: left;
+    margin-right: 20px;
 }
 
 .logo-box {
     width: 100%;
-    border: 1px solid red;
 }
 
 .logo { 
@@ -64,12 +69,12 @@ main {
     margin: 10px 0;
     padding: 5px;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px rgba(134, 134, 134, 0.2);
+    box-shadow: 2px 2px 2px 2px rgba(138, 138, 138, 0.227);
 }
 
 .profile-data {
     display: flex;
-    border: 1px solid grey;
+    border: 1px solid rgba(138, 138, 138, 0.2);
     margin: 20px 0;
 }
 
@@ -125,14 +130,14 @@ main {
 
 .top-row {
     display: flex;
-    padding: 5px;
+    padding: 10px;
     justify-content: space-between;
-    background-color: bisque;
+    border: 1px solid rgba(138, 138, 138, 0.2);
+    border-radius: 10px;
 }
 
 .demand-stats {
-    max-width: 25%;
-    width: 300px;
+    width: 30%;
     padding: 10px;
 }
 
@@ -169,10 +174,93 @@ main {
 
 .percentage {
     margin: 10px 0;
+    font-weight: bolder;
     color: red;
 }
 
 .slider-controls {
     font-size: 1.3em;
     margin: 10px 0;
+}
+
+/* sales card styling */
+
+.sales-card {
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 18%;
+}
+
+.sales-card .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    font-size: 1.2em;
+    color: white;
+    border-radius: 11px;
+}
+
+.sales-card .card-title {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.sales-card .card-sub-title {
+    font-size: 0.9em;
+    font-weight: bolder;
+}
+
+.sales-card .amount {
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 3em;
+    font-weight: bolder;
+    position: relative;
+    width: 80%;
+    text-align: right;
+}
+
+.amount .fa-solid {
+    font-size: 0.5em;
+    position: absolute;
+    top: 20px;
+    left: 1px;
+}
+
+.view-wines {
+    padding: 8px;
+    font-weight: bolder;
+    background-color: black;
+    color:#fff;
+    border-radius: 10px;
+}
+
+.sales {
+    background-color: #DFE6FF;
+}
+
+.sales .icon {
+    background-color: #6C9CFD;
+    color: #fff;
+}
+
+.revenue {
+    background-color: #F1F3FF;
+}
+
+.revenue .icon {
+    background-color: #fff;
+    border: 1px solid #6C9CFD;
+    color: #6C9CFD;
+}
+
+.stock {
+    background-color: #F1F1F2;
+}
+
+.stock .icon {
+    background-color: #000;
+    color: #fff;
 }
