@@ -9,6 +9,22 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* utitlity clases */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+/* utitility classes end */
 main {
     margin: 15px;
     padding: 10px;
@@ -114,6 +130,49 @@ main {
     background-color: bisque;
 }
 
+.demand-stats {
+    max-width: 25%;
+    width: 300px;
+    padding: 10px;
+}
+
 .new-wine {
     padding: 10px;
+    background: rgb(224, 192, 9);
+    font-weight: bolder;
+    font-size: 0.7em;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px  rgb(134, 134, 134);
+}
+
+.new-wine .fa-solid {
+    font-size: 1.3em;
+}
+
+.demand-stats .stats-title {
+    margin: 10px 0;
+    text-align: center;
+    color:rgb(20, 20, 20);
+    font-weight: bolder;
+}
+
+.days-box {
+    width: 100%;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.day {
+    font-size: 0.8em;
+    color: grey;
+}
+
+.percentage {
+    margin: 10px 0;
+    color: red;
+}
+
+.slider-controls {
+    font-size: 1.3em;
+    margin: 10px 0;
 }

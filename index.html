@@ -84,24 +84,26 @@
         <div class="top-row">
             <div class="demand-stats">
                 <div>
-                    <button class="new-wine"> New Wine <img src="images/icons/plus.png" alt="plus icon"></button>
+                    <button class="new-wine"> New Wine <i class="fa-solid fa-plus"></i></button>
                 </div>
                 <div>
-                    <p> Demand Statistics</p>
+                    <p class="stats-title"> Demand Statistics</p>
                 </div>
-                <div>
-                    <p class="day">Yesterday</p>
-                </div>
-                <div>
-                    <p class="wine-type">Red Wine</p>
-                    <span class="percentage"><img src="images/icons/double-down-arrow.png" alt="down arrow"> 3 &percnt;</span>
-                    <div class="slider-controls">
-                        <span class="back-button slider-control">&lt;</span>
-                        <span class="next-button slider-control">&gt;</span>
+                <div class="flex days-box">
+                    <div>
+                        <p class="day">Yesterday</p>
                     </div>
-                </div>
-                <div>
-                    <p class="day">Today</p>
+                    <div class="flex-col bold">
+                        <p class="wine-type">Red Wine</p>
+                        <span class="percentage"><i class="fa-solid fa-angles-down"></i>&nbsp; 3 &nbsp;<i class="fa-solid fa-percent"></i></span>
+                        <div class="slider-controls">
+                            <span class="back-button slider-control"><i class="fa-solid fa-circle-chevron-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span class="next-button slider-control"><i class="fa-solid fa-circle-chevron-right"></i></span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="day">Today</p>
+                    </div>
                 </div>
             </div>
             <div class="sales-card">
