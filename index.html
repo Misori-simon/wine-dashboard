@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Wine Dashboard</title>
+</head>
+<body>
+    <div class="main-box">
+        <aside class="sidebar">
+            <div class="logo-box">
+                <span class="logo">
+                    <img src="images/logo.jpg" alt="logo">
+                </span>
+                <span class="wine-bottle">
+                    <img src="images/wine-bottle.png" alt="wine bottle">
+                </span>
+            </div>
+            <div class="sibebar-card profile-data">
+                <div class="profile-photo">
+                    <img src="images/profile/profile-photo.png" alt="Profile Photo">
+                </div>
+                <div class="profile-info">
+                    <p class="username">Jane Doe K.</p>
+                    <p class="user-email">jane.doe@yahoo.fr</p>
+                </div>
+            </div>
+            <div class="sibebar-card">
+                <div class="sidebar-card-item">
+                    <span class="name"><i class="fa-solid fa-chess-board"></i> &nbsp;&nbsp;Dashboard</span>
+                    <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div class="sidebar-card-item">
+                    <span class="name"><i class="fa-solid fa-users"></i> &nbsp;&nbsp;users</span>
+                    <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div class="sidebar-card-item">
+                    <span class="name"><i class="fa-solid fa-box"></i> &nbsp;&nbsp;modules</span>
+                    <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+            <div class="sibebar-card">
+                <div class="sidebar-card-item">
+                    <span class="name"><i class="fa-solid fa-utensils"></i> &nbsp;&nbsp;recipe management</span>
+                    <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div class="sidebar-card-item">
+                    <span class="name"><i class="fa-solid fa-bottle-droplet"></i> &nbsp;&nbsp;wine management</span>
+                    <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div class="sidebar-card-item">
+                    <span class="name"><i class="fa-solid fa-question"></i> &nbsp;&nbsp;questions</span>
+                    <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div class="sidebar-card-item">
+                    <span class="name"><i class="fa-solid fa-book-open-reader"></i> &nbsp;&nbsp;lectures</span>
+                    <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+            <div class="sibebar-card">
+                <div class="sidebar-card-item">
+                    <span class="name"><i class="fa-solid fa-list-ul"></i> &nbsp;&nbsp;orders </span>
+                    <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div class="sidebar-card-item">
+                    <span class="name"><i class="fa-solid fa-clock-rotate-left"></i></i> &nbsp;&nbsp;newsletters </span>
+                    <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div class="sidebar-card-item">
+                    <span class="name"><i class="fa-solid fa-gear"></i> &nbsp;&nbsp;settings</span>
+                    <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+            <div class="logout-box">
+                <div class="sidebar-card-item">
+                    <span class="name"><i class="fa-solid fa-power-off"></i> &nbsp;&nbsp;logout</span>
+                    <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <section class="top-row">
+                <div class="demand-stats">
+                    <div>
+                        <button class="new-wine"> New Wine <i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div>
+                        <p class="stats-title"> Demand Statistics</p>
+                    </div>
+                    <div class="flex days-box">
+                        <div>
+                            <p class="day">Yesterday</p>
+                        </div>
+                        <div class="flex-col bold">
+                            <p class="wine-type">Red Wine</p>
+                            <span class="percentage"><i class="fa-solid fa-angles-down"></i>&nbsp; 3 &nbsp;<i class="fa-solid fa-percent"></i></span>
+                            <div class="slider-controls">
+                                <span class="back-button slider-control"><i class="fa-solid fa-circle-chevron-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <span class="next-button slider-control"><i class="fa-solid fa-circle-chevron-right"></i></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="day">Today</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sales-card sales">
+                    <span class="icon"><i class="fa-solid fa-bolt-lightning"></i></span>
+                    <h3 class="card-title">Sales</h3>
+                    <p class="card-sub-title">(300 - 500 sales) </p>
+                    <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 4000</span>
+                </div>
+                <div class="sales-card revenue">
+                    <span class="icon"><i class="fa-solid fa-dollar-sign"></i></span>
+                    <h3 class="card-title">Total Revenue</h3>
+                    <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 5000</span>
+                </div>
+                <div class="sales-card stock">
+                    <div class="flex space-btw">
+                        <span class="icon"><i class="fa-solid fa-store"></i></span>
+                        <span class="view-wines"> view wines</span>
+                    </div>
+                    <h3 class="card-title">In Stock</h3>
+                    <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 1000</span>
+                </div>
+            </section>
+            <section class="bottom-row">
+                <div class="recipe-box">
+                    <div class="flex space-btw">
+                            <button class="new-recipe-btn"> New Recipe <i class="fa-solid fa-plus"></i></button>
+                        <span class="all-recipe">
+                            all&nbsp;&nbsp; <span class="cirlcle-outline"><i class="fa-solid fa-angle-right"></i></span>
+                        </span>
+                    </div>
+                    <h3>Recent Recipes</h3>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Chicken Grease</p>
+                            <p class="recipe-group">Gimme Grease</p>
+                        </div>
+                        <div class="arrow-box"> <i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Chicken Grease</p>
+                            <p class="recipe-group">Gimme Grease</p>
+                        </div>
+                        <div class="arrow-box"> <i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Chicken Grease</p>
+                            <p class="recipe-group">Gimme Grease</p>
+                        </div>
+                        <div class="arrow-box"> <i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                </div>
+                <div class="wines-sold">
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                        <h3>Most bought wine</h3>
+                        </div>
+                        <div class="round-circle"> <img src="images/wine-bottle.png" alt="wine bottle"></div>
+                    </div>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Mulled Wine</p>
+                            <p class="recipe-group">grapes</p>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="progress-circle">
+                              <div class="mask full-p81">
+                                <div class="fill-p81"></div>
+                              </div>
+                              <div class="mask half">
+                                <div class="fill-p81"></div>
+                              </div>
+                              <div class="progress-value"> 81% </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Mulled Wine</p>
+                            <p class="recipe-group">grapes</p>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="progress-circle">
+                              <div class="mask full-p81">
+                                <div class="fill-p81"></div>
+                              </div>
+                              <div class="mask half">
+                                <div class="fill-p81"></div>
+                              </div>
+                              <div class="progress-value"> 81% </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Rose Wine</p>
+                            <p class="recipe-group">grapes</p>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="progress-circle">
+                              <div class="mask full-p41">
+                                <div class="fill-p41"></div>
+                              </div>
+                              <div class="mask half">
+                                <div class="fill-p41"></div>
+                              </div>
+                              <div class="progress-value"> 41% </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Fortified Wine</p>
+                            <p class="recipe-group">grapes</p>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="progress-circle">
+                              <div class="mask full-p33">
+                                <div class="fill-p33"></div>
+                              </div>
+                              <div class="mask half">
+                                <div class="fill-p33"></div>
+                              </div>
+                              <div class="progress-value"> 33% </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="all-wines-box">
+                        <div class="all-wines">
+                            <span class="down-arrow"><i class="fa-solid fa-circle-arrow-down"></i></span>
+                            <p>all</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="graph-stats">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div id="tradingview_d992c"></div>
+                        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener" target="_blank"><span class="blue-text">Apple</span></a> by TradingView</div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                        <script type="text/javascript">
+                        new TradingView.MediumWidget(
+                        {
+                        "symbols": [
+                        [
+                            "Apple",
+                            "AAPL|1D"
+                        ],
+                        [
+                            "Google",
+                            "GOOGL|1D"
+                        ],
+                        [
+                            "Microsoft",
+                            "MSFT|1D"
+                        ]
+                        ],
+                        "chartOnly": false,
+                        "width": "100%",
+                        "height": "70%",
+                        "locale": "en",
+                        "colorTheme": "light",
+                        "autosize": true,
+                        "showVolume": false,
+                        "hideDateRanges": false,
+                        "hideMarketStatus": false,
+                        "scalePosition": "right",
+                        "scaleMode": "Normal",
+                        "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                        "fontSize": "10",
+                        "noTimeScale": false,
+                        "valuesTracking": "1",
+                        "chartType": "line",
+                        "container_id": "tradingview_d992c"
+                    }
+                        );
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+
+                    <button class="comments">
+                        Comments <i class="fa-solid fa-comments"></i>
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

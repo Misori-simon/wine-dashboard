@@ -1,0 +1,508 @@
+* {
+    /* clear irregular  and default spaces */
+    box-sizing: content-box;
+    border: 0;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* utitlity clases */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.space-btw {
+    justify-content: space-between;
+}
+
+/* utitility classes end */
+.main-box {
+    display: flex;
+    margin: 15px auto;
+    padding: 10px;
+    border: 1px solid rgb(110, 110, 110);
+    border-radius: 5px;
+    max-width: 1200px;
+}
+
+/* styling for the side bar begins here */
+
+.sidebar {
+    display: block;
+    height: inherit;
+    width: 23%;
+    margin-right: 20px;
+}
+
+.logo-box {
+    width: 100%;
+}
+
+.logo { 
+    padding-right: 10px;
+}
+
+.logo img {
+    max-height: 60px;
+    border-radius: 5px;
+}
+
+.wine-bottle img {
+    max-height: 60px;
+}
+
+.sibebar-card {
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(138, 138, 138, 0.227);
+}
+
+.profile-data {
+    display: flex;
+    border: 1px solid rgba(138, 138, 138, 0.2);
+    margin: 20px 0;
+}
+
+.profile-photo {
+    max-width: 60px;
+    padding-right: 10px;
+}
+
+.profile-photo img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.username {
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+.user-email {
+    font-size: .8em;
+    color:rgb(151, 151, 151);
+}
+
+.sidebar-card-item {
+    padding: 15px 10px;
+    display: flex;
+    justify-content:space-between;
+    border-radius: 5px;
+}
+
+.name {
+    display: flex;
+    text-transform: capitalize;
+    align-items:center;
+    font-size: 0.9em;
+}
+
+.sidebar-card-item .fa-solid {
+    font-size: 1.3em;
+    color: rgb(66, 66, 66);
+}
+
+.arrow .fa-solid {
+    font-size: 1em;
+}
+
+.sidebar-card-item:hover {
+    background-color: rgb(185, 185, 185);
+}
+
+main {
+    width: 77%;
+}
+
+
+/* top-row stylings */
+
+.top-row,
+.bottom-row {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.top-row {
+    border: 1px solid rgba(138, 138, 138, 0.2);
+}
+
+.demand-stats {
+    width: 30%;
+    padding: 10px;
+}
+
+.new-wine {
+    padding: 10px;
+    background: rgb(224, 192, 9);
+    font-weight: bolder;
+    font-size: 0.7em;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px  rgb(134, 134, 134);
+}
+
+.new-wine .fa-solid {
+    font-size: 1.3em;
+}
+
+.demand-stats .stats-title {
+    margin: 10px 0;
+    text-align: center;
+    color:rgb(20, 20, 20);
+    font-weight: bolder;
+}
+
+.days-box {
+    width: 100%;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.day {
+    font-size: 0.8em;
+    color: grey;
+}
+
+.percentage {
+    margin: 10px 0;
+    font-weight: bolder;
+    color: red;
+}
+
+.slider-controls {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+/* sales card styling */
+
+.sales-card {
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 18%;
+}
+
+.sales-card .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    font-size: 1.2em;
+    color: white;
+    border-radius: 11px;
+}
+
+.sales-card .card-title {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.sales-card .card-sub-title {
+    font-size: 0.9em;
+    font-weight: bolder;
+}
+
+.sales-card .amount {
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 3em;
+    font-weight: bolder;
+    position: relative;
+    width: 80%;
+    text-align: right;
+}
+
+.amount .fa-solid {
+    font-size: 0.5em;
+    position: absolute;
+    top: 20px;
+    left: 1px;
+}
+
+.view-wines {
+    padding: 8px;
+    font-weight: bolder;
+    background-color: black;
+    color:#fff;
+    border-radius: 10px;
+}
+
+.sales {
+    background-color: #DFE6FF;
+}
+
+.sales .icon {
+    background-color: #6C9CFD;
+    color: #fff;
+}
+
+.revenue {
+    background-color: #F1F3FF;
+}
+
+.revenue .icon {
+    background-color: #fff;
+    border: 1px solid #6C9CFD;
+    color: #6C9CFD;
+}
+
+.stock {
+    background-color: #F1F1F2;
+}
+
+.stock .icon {
+    background-color: #000;
+    color: #fff;
+}
+
+/* styling of bottom row */
+.recipe-box,
+.wines-sold {
+    margin: 10px 0;
+    padding: 5px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(138, 138, 138, 0.227);
+    width: 28%;
+}
+
+.recipe-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3em 0;
+    text-transform: capitalize;
+}
+
+.round-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: #FFD701;
+}
+
+.round-circle img {
+    height: 100%;
+}
+
+.new-recipe-btn  {
+    font-size: 1.1em;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #FFD701 ;
+    background-color: #fff;
+}
+
+.all-recipe {
+    display: flex;
+    text-transform: capitalize;
+    font-size: 1.1em;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #FFD701;
+}
+
+.cirlcle-outline {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    margin-left: 1em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 0.9em;
+    border: 2px solid #000;
+}
+
+.recipe-box h3 {
+    padding: 1.5em 0;
+}
+
+.recipe-name {
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.recipe-group {
+    font-size: 0.9em;
+    color:rgb(66, 66, 66);
+    margin-top: -5px;
+}
+
+/* progress bar styling */
+
+.progress-wrap {
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.progress-wrap .progress-circle .mask,
+.progress-wrap .progress-circle .fill-p81,
+.progress-wrap .progress-circle .fill-p41,
+.progress-wrap .progress-circle .fill-p33 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.progress-wrap .progress-circle .mask {
+    clip: rect(0px, 25px, 50px, 0px);
+}
+
+.progress-wrap .progress-value{
+    width: 36px;
+    height: 37px;
+    border-radius: 50%;
+    background: #ffffff;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 7px;
+    margin-left: 7px;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+
+/* color animation */
+
+.mask .fill-p81,
+.mask .fill-p41,
+.mask .fill-p33 {
+    clip: rect(0px, 50px, 50px, 25px);
+    background-color: #FFD701;
+}
+
+.mask.full-p81,
+.progress-circle .fill-p81 {
+    animation: fill-p81 ease-in-out 3s;
+    transform: rotate(146deg);
+}
+
+@keyframes fill-p81 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(146deg);
+    }
+}
+
+/* styling for 41% progress */
+
+.mask.full-p41,
+.progress-circle .fill-p41 {
+    animation: fill-p41 ease-in-out 3s;
+    transform: rotate(74deg);
+}
+
+.mask .fill-p41 {
+    clip: rect(0px, 50px, 50px, 25px);
+    background-color: #FFD701;
+}
+
+.mask.full-p41,
+.progress-circle .fill-p41 {
+    animation: fill-p41 ease-in-out 3s;
+    transform: rotate(74deg);
+}
+
+@keyframes fill-p41 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(74deg);
+    }
+}
+
+/* styling for 33% progress */
+
+.mask.full-p33,
+.progress-circle .fill-p33 {
+    animation: fill-p33 ease-in-out 3s;
+    transform: rotate(59deg);
+}
+
+.mask .fill-p33 {
+    clip: rect(0px, 50px, 50px, 25px);
+    background-color: #FFD701;
+}
+
+.mask.full-p33,
+.progress-circle .fill-p33 {
+    animation: fill-p33 ease-in-out 3s;
+    transform: rotate(59deg);
+}
+
+@keyframes fill-p33 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(59deg);
+    }
+}
+
+.all-wines-box{
+    position: relative;
+}
+
+.all-wines {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.down-arrow {
+    font-size: 1.5em;
+}
+
+.graph-stats {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.graph-stats .comments {
+    align-self: flex-end;
+    border: 2px solid #FFD701;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 1em;
+    background: none;
+}
+
+.comments .fa-solid {
+    font-size: 1.5em;
+    padding-left: 1em;
+}
