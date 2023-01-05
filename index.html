@@ -9,7 +9,7 @@
     <title>Wine Dashboard</title>
 </head>
 <body>
-    <main class="main">
+    <div class="main-box">
         <aside class="sidebar">
             <div class="logo-box">
                 <span class="logo">
@@ -81,129 +81,171 @@
                 </div>
             </div>
         </aside>
-        <div class="top-row">
-            <div class="demand-stats">
-                <div>
-                    <button class="new-wine"> New Wine <i class="fa-solid fa-plus"></i></button>
-                </div>
-                <div>
-                    <p class="stats-title"> Demand Statistics</p>
-                </div>
-                <div class="flex days-box">
+        <main>
+            <section class="top-row">
+                <div class="demand-stats">
                     <div>
-                        <p class="day">Yesterday</p>
+                        <button class="new-wine"> New Wine <i class="fa-solid fa-plus"></i></button>
                     </div>
-                    <div class="flex-col bold">
-                        <p class="wine-type">Red Wine</p>
-                        <span class="percentage"><i class="fa-solid fa-angles-down"></i>&nbsp; 3 &nbsp;<i class="fa-solid fa-percent"></i></span>
-                        <div class="slider-controls">
-                            <span class="back-button slider-control"><i class="fa-solid fa-circle-chevron-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span class="next-button slider-control"><i class="fa-solid fa-circle-chevron-right"></i></span>
+                    <div>
+                        <p class="stats-title"> Demand Statistics</p>
+                    </div>
+                    <div class="flex days-box">
+                        <div>
+                            <p class="day">Yesterday</p>
+                        </div>
+                        <div class="flex-col bold">
+                            <p class="wine-type">Red Wine</p>
+                            <span class="percentage"><i class="fa-solid fa-angles-down"></i>&nbsp; 3 &nbsp;<i class="fa-solid fa-percent"></i></span>
+                            <div class="slider-controls">
+                                <span class="back-button slider-control"><i class="fa-solid fa-circle-chevron-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <span class="next-button slider-control"><i class="fa-solid fa-circle-chevron-right"></i></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="day">Today</p>
                         </div>
                     </div>
-                    <div>
-                        <p class="day">Today</p>
+                </div>
+                <div class="sales-card sales">
+                    <span class="icon"><i class="fa-solid fa-bolt-lightning"></i></span>
+                    <h3 class="card-title">Sales</h3>
+                    <p class="card-sub-title">(300 - 500 sales) </p>
+                    <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 4000</span>
+                </div>
+                <div class="sales-card revenue">
+                    <span class="icon"><i class="fa-solid fa-dollar-sign"></i></span>
+                    <h3 class="card-title">Total Revenue</h3>
+                    <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 5000</span>
+                </div>
+                <div class="sales-card stock">
+                    <div class="flex space-btw">
+                        <span class="icon"><i class="fa-solid fa-store"></i></span>
+                        <span class="view-wines"> view wines</span>
+                    </div>
+                    <h3 class="card-title">In Stock</h3>
+                    <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 1000</span>
+                </div>
+            </section>
+            <section class="bottom-row">
+                <div class="recipe-box">
+                    <div class="flex space-btw">
+                            <button class="new-recipe-btn"> New Recipe <i class="fa-solid fa-plus"></i></button>
+                        <span class="all-recipe">
+                            all&nbsp;&nbsp; <span class="cirlcle-outline"><i class="fa-solid fa-angle-right"></i></span>
+                        </span>
+                    </div>
+                    <h3>Recent Recipes</h3>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Chicken Grease</p>
+                            <p class="recipe-group">Gimme Grease</p>
+                        </div>
+                        <div class="arrow-box"> <i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Chicken Grease</p>
+                            <p class="recipe-group">Gimme Grease</p>
+                        </div>
+                        <div class="arrow-box"> <i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Chicken Grease</p>
+                            <p class="recipe-group">Gimme Grease</p>
+                        </div>
+                        <div class="arrow-box"> <i class="fa-solid fa-angle-right"></i></div>
                     </div>
                 </div>
-            </div>
-            <div class="sales-card sales">
-                <span class="icon"><i class="fa-solid fa-bolt-lightning"></i></span>
-                <h3 class="card-title">Sales</h3>
-                <p class="card-sub-title">(300 - 500 sales) </p>
-                <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 4000</span>
-            </div>
-            <div class="sales-card revenue">
-                <span class="icon"><i class="fa-solid fa-dollar-sign"></i></span>
-                <h3 class="card-title">Total Revenue</h3>
-                <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 5000</span>
-            </div>
-            <div class="sales-card stock">
-                <div class="flex space-btw">
-                    <span class="icon"><i class="fa-solid fa-store"></i></span>
-                    <span class="view-wines"> view wines</span>
-                </div>
-                <h3 class="card-title">In Stock</h3>
-                <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 1000</span>
-            </div>
-        </div>
-        <div class="bottom-row">
-            <div class="recipe-box">
-                <div>
-                    <span class="new-reripe">
-                        <button> New Recipe +</button>
-                    </span>
-                    <span class="all-recipe">
-                        all&nbsp;&nbsp; <span class="cirlcle-outline">&gt;</span>
-                    </span>
-                </div>
-                <h3>Recent Recipes</h3>
-                <div class="recipe-item">
-                    <div class="recipe-info">
-                        <p class="recipe-name">Chicken Grease</p>
-                        <p class="recipe-group">Gimme Grease</p>
+                <div class="wines-sold">
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                        <h3>Most bought wine</h3>
+                        </div>
+                        <div class="round-circle"> <img src="images/wine-bottle.png" alt="wine bottle"></div>
                     </div>
-                    <div> &gt;</div>
-                </div>
-                <div class="recipe-item">
-                    <div class="recipe-info">
-                        <p class="recipe-name">Chicken Grease</p>
-                        <p class="recipe-group">Gimme Grease</p>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Mulled Wine</p>
+                            <p class="recipe-group">grapes</p>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="progress-circle">
+                              <div class="mask full-p81">
+                                <div class="fill-p81"></div>
+                              </div>
+                              <div class="mask half">
+                                <div class="fill-p81"></div>
+                              </div>
+                              <div class="progress-value"> 81% </div>
+                            </div>
+                        </div>
                     </div>
-                    <div> &gt;</div>
-                </div>
-                <div class="recipe-item">
-                    <div class="recipe-info">
-                        <p class="recipe-name">Chicken Grease</p>
-                        <p class="recipe-group">Gimme Grease</p>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Mulled Wine</p>
+                            <p class="recipe-group">grapes</p>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="progress-circle">
+                              <div class="mask full-p81">
+                                <div class="fill-p81"></div>
+                              </div>
+                              <div class="mask half">
+                                <div class="fill-p81"></div>
+                              </div>
+                              <div class="progress-value"> 81% </div>
+                            </div>
+                        </div>
                     </div>
-                    <div> &gt;</div>
-                </div>
-            </div>
-            <div class="wines-sold">
-                <div class="recipe-item">
-                    <div class="recipe-info">
-                       <h3>Most bought wine</h3>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Rose Wine</p>
+                            <p class="recipe-group">grapes</p>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="progress-circle">
+                              <div class="mask full-p41">
+                                <div class="fill-p41"></div>
+                              </div>
+                              <div class="mask half">
+                                <div class="fill-p41"></div>
+                              </div>
+                              <div class="progress-value"> 41% </div>
+                            </div>
+                        </div>
                     </div>
-                    <div> <img src="images/wine-bottle.png" alt="wine bottle"></div>
-                </div>
-                <div class="recipe-item">
-                    <div class="recipe-info">
-                        <p class="recipe-name">Mulled Wine</p>
-                        <p class="recipe-group">grapes</p>
+                    <div class="recipe-item">
+                        <div class="recipe-info">
+                            <p class="recipe-name">Fortified Wine</p>
+                            <p class="recipe-group">grapes</p>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="progress-circle">
+                              <div class="mask full-p33">
+                                <div class="fill-p33"></div>
+                              </div>
+                              <div class="mask half">
+                                <div class="fill-p33"></div>
+                              </div>
+                              <div class="progress-value"> 33% </div>
+                            </div>
+                        </div>
                     </div>
-                    <div> pbar</div>
-                </div>
-                <div class="recipe-item">
-                    <div class="recipe-info">
-                        <p class="recipe-name">Mulled Wine</p>
-                        <p class="recipe-group">grapes</p>
+                    <div class="all-wines-box">
+                        <div class="all-wines">
+                            <span class="down-arrow"><i class="fa-solid fa-circle-arrow-down"></i></span>
+                            <p>all</p>
+                        </div>
                     </div>
-                    <div> pbar</div>
                 </div>
-                <div class="recipe-item">
-                    <div class="recipe-info">
-                        <p class="recipe-name">Rose Wine</p>
-                        <p class="recipe-group">grapes</p>
-                    </div>
-                    <div> pbar</div>
+                <div class="graph-stats">
+                    <img src="images/sales-graph" alt="sales graph">
                 </div>
-                <div class="recipe-item">
-                    <div class="recipe-info">
-                        <p class="recipe-name">FOrtified Wine</p>
-                        <p class="recipe-group">grapes</p>
-                    </div>
-                    <div> pbar</div>
-                </div>
-                <div class="all-wines">
-                    <span class="down-arrow">&dArr;</span>
-                    <p>all</p>
-                </div>
-            </div>
-            <div class="graph-stats">
-                <img src="images/sales-graph" alt="sales graph">
-            </div>
-        </div>
-    </main>
+            </section>
+        </main>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
