@@ -43,7 +43,7 @@
 .sidebar {
     display: block;
     height: inherit;
-    width: 25%;
+    width: 23%;
     margin-right: 20px;
 }
 
@@ -125,7 +125,7 @@
 }
 
 main {
-    width: 75%;
+    width: 77%;
 }
 
 
@@ -136,8 +136,11 @@ main {
     display: flex;
     padding: 10px;
     justify-content: space-between;
-    border: 1px solid rgba(138, 138, 138, 0.2);
     border-radius: 10px;
+}
+
+.top-row {
+    border: 1px solid rgba(138, 138, 138, 0.2);
 }
 
 .demand-stats {
@@ -276,7 +279,7 @@ main {
     padding: 5px 20px;
     border-radius: 5px;
     box-shadow: 2px 2px 2px 2px rgba(138, 138, 138, 0.227);
-    width: 30%;
+    width: 28%;
 }
 
 .recipe-item {
@@ -482,3 +485,24 @@ main {
     font-size: 1.5em;
 }
 
+.graph-stats {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.graph-stats .comments {
+    align-self: flex-end;
+    border: 2px solid #FFD701;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 1em;
+    background: none;
+}
+
+.comments .fa-solid {
+    font-size: 1.5em;
+    padding-left: 1em;
+}
