@@ -10,7 +10,40 @@
 </head>
 <body>
     <div class="main-box">
-        <aside class="sidebar">
+        <nav id="mobile-nav" class="mobile-view mobile-nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="profile-box">
+                <span class="app-logo"><img src="images/logo.jpg" alt=""></span>
+                <span class="nav-profile-photo"><a href=""><img src="images/profile/profile-photo.png" alt=""></a></span>
+            </div>
+            <a href="http://" class="mobile-nav-item">
+                <i class="fa-solid fa-home"></i> Home
+            </a>
+            <a href="http://" class="mobile-nav-item">
+                <i class="fa-solid fa-customers"></i> Customers
+            </a>
+            <a href="http://" class="mobile-nav-item">
+                <i class="fa-solid fa-list-ul"></i> Orders
+            </a>
+            <a href="http://" class="mobile-nav-item">
+                <i class="fa-solid fa-bottle"></i> Wine Management
+            </a>
+            <div class="hr"></div>
+            <p class="mobile-nav-sub-title">Account</p>
+            <a href="http://" class="mobile-nav-item">
+                <i class="fa-solid fa-home"></i> Messages
+            </a>
+            <a href="http://" class="mobile-nav-item">
+                <i class="fa-solid fa-bell"></i> Notifications
+            </a>
+            <a href="http://" class="mobile-nav-item">
+                <i class="fa-solid fa-gear"></i> Settings
+            </a>
+            <a href="http://" class="mobile-nav-item">
+                <i class="fa-solid fa-power-off"></i> logout
+            </a>
+        </nav>
+        <aside class="sidebar no-mobile">
             <div class="logo-box">
                 <span class="logo">
                     <img src="images/logo.jpg" alt="logo">
