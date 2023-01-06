@@ -1,93 +1,72 @@
 
-let slideIndex = 1;
-let tabIndex = 1;
+let index = 1;
 
+let tab = {
+    objClassName: "tab-item",
+    controlClassName: "tab",
+    activeClass: " active-tab",
+    displayValue: "flex"
+}
+
+let slide = {
+    objClassName: "slide-item",
+    controlClassName: "disc",
+    activeClass: " active-disc",
+    displayValue: "block"
+}
 
 mediaScreenChange()
 
 function mediaScreenChange() {
     if (window.innerWidth < 768) {
     console.log('Media Query Matched!')
-    showSlides(slideIndex);
-    showtabs(tabIndex);
+    showObJ(index, ...Object.values(tab));
+    showObJ(index, ...Object.values(slide));
   } else {
-    resetTabs()
-    resetCards()
+    resetObjs(tab.objClassName)
+    resetObjs(slide.objClassName)
   }
 }
-
 
 window.addEventListener("resize", mediaScreenChange)
 
 
+function currentObj(index, type) {
+    if(type == 'tab') {
+        showObJ(index, ...Object.values(tab));
+    } else {
+        showObJ(index, ...Object.values(slide));
+    }
+}
+
+function showObJ(index, objClassName, controlClassName, activeClass, displayValue) {
+    let i;
+    let objs = document.getElementsByClassName(objClassName);
+    let objControls = document.getElementsByClassName(controlClassName);
+
+    if (index > objs.length) {index = 1}
+    if (index < 1) {index = objs.length}
+    for (i = 0; i < objs.length; i++) {
+        objs[i].style.display = "none";
+    }
+    for (i = 0; i < objControls.length; i++) {
+        objControls[i].className = objControls[i].className.replace(activeClass, "");
+    }
+    objs[index-1].style.display = displayValue;
+    objControls[index-1].className += activeClass;
+}
+
+function resetObjs(objClassName) {
+    let tabs = document.getElementsByClassName(objClassName);
+    for (i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "unset";
+    }
+}
+
 function openNav() {
     document.getElementById("mobile-nav").style.width = "100%"
-    console.log('clicked')
 }
 
-/* Set the width of the side navigation to 0 */
 function closeNav() {
     document.getElementById("mobile-nav").style.width = "0"
-}
-
-// for the carousel
-
-function currentSlide(n) {
-    showSlides(slideIndex = n)
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide-item")
-    let discs = document.getElementsByClassName("disc")
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"
-    }
-    for (i = 0; i < discs.length; i++) {
-        discs[i].className = discs[i].className.replace(" active-disc", "")
-    }
-    slides[slideIndex-1].style.display = "block"
-    discs[slideIndex-1].className += " active-disc"
-    console.log('ran slides')
-}
-
-
-// for tabs
-
-
-function currentTab(n) {
-    showtabs(tabIndex = n);
-}
-
-function showtabs(n) {
-    let i;
-    let tabs = document.getElementsByClassName("tab-item");
-    let tabMenus = document.getElementsByClassName("tab");
-
-    if (n > tabs.length) {tabIndex = 1}
-    if (n < 1) {tabIndex = tabs.length}
-    for (i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "none";
-    }
-    for (i = 0; i < tabMenus.length; i++) {
-        tabMenus[i].className = tabMenus[i].className.replace(" active-tab", "");
-    }
-    tabs[tabIndex-1].style.display = "flex";
-    tabMenus[tabIndex-1].className += " active-tab";
-}
-
-function resetTabs() {
-    let tabs = document.getElementsByClassName("tab-item");
-    for (i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "unset";
-    }
-}
-
-function resetCards() {
-    let tabs = document.getElementsByClassName("slide-item");
-    for (i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "unset";
-    }
 }
