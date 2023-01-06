@@ -10,7 +10,41 @@
 </head>
 <body>
     <div class="main-box">
-        <aside class="sidebar">
+        <div id="mobile-nav" class="mobile-nav-box" onclick="closeNav()">
+            <nav class="mobile-view mobile-nav">
+                <div class="profile-box">
+                    <span class="app-logo"><img src="images/logo.jpg" alt=""></span>
+                    <span class="nav-profile-photo"><a href=""><img src="images/profile/profile-photo.png" alt=""></a></span>
+                </div>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-home"></i> Home
+                </a>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-users"></i> Customers
+                </a>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-list-ul"></i> Orders
+                </a>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-bottle-droplet"></i> Wine Management
+                </a>
+                <div class="hr"></div>
+                <p class="mobile-nav-sub-title">Account</p>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-message"></i> Messages
+                </a>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-bell"></i> Notifications
+                </a>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-gear"></i> Settings
+                </a>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-power-off"></i> logout
+                </a>
+            </nav>
+        </div>
+        <aside class="sidebar no-mobile">
             <div class="logo-box">
                 <span class="logo">
                     <img src="images/logo.jpg" alt="logo">
@@ -83,7 +117,7 @@
         </aside>
         <main>
             <section class="top-row">
-                <div class="demand-stats">
+                <div class="demand-stats slide-item fade">
                     <div>
                         <button class="new-wine"> New Wine <i class="fa-solid fa-plus"></i></button>
                     </div>
@@ -107,30 +141,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="sales-card sales">
+                <div class="sales-card sales slide-item fade">
                     <span class="icon"><i class="fa-solid fa-bolt-lightning"></i></span>
                     <h3 class="card-title">Sales</h3>
                     <p class="card-sub-title">(300 - 500 sales) </p>
                     <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 4000</span>
                 </div>
-                <div class="sales-card revenue">
+                <div class="sales-card revenue slide-item fade">
                     <span class="icon"><i class="fa-solid fa-dollar-sign"></i></span>
                     <h3 class="card-title">Total Revenue</h3>
                     <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 5000</span>
                 </div>
-                <div class="sales-card stock">
-                    <div class="flex space-btw">
+                <div class="sales-card stock slide-item fade">
+                    <div class="flex space-btw view-wines-box">
                         <span class="icon"><i class="fa-solid fa-store"></i></span>
                         <span class="view-wines"> view wines</span>
                     </div>
                     <h3 class="card-title">In Stock</h3>
                     <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 1000</span>
                 </div>
+                <div class="mobile-view dics-box">
+                    <span class="disc" onclick="currentObj(1, 'slide')"></span>
+                    <span class="disc" onclick="currentObj(2, 'slide')"></span>
+                    <span class="disc" onclick="currentObj(3, 'slide')"></span>
+                    <span class="disc" onclick="currentObj(4, 'slide')"></span>
+                </div>
             </section>
             <section class="bottom-row">
-                <div class="recipe-box">
-                    <div class="flex space-btw">
-                            <button class="new-recipe-btn"> New Recipe <i class="fa-solid fa-plus"></i></button>
+                
+                <div class="recipe-box tab-item fade">
+                    <div class="flex space-btw move-to-last">
+                        <button class="new-recipe-btn"> New Recipe <i class="fa-solid fa-plus"></i></button>
                         <span class="all-recipe">
                             all&nbsp;&nbsp; <span class="cirlcle-outline"><i class="fa-solid fa-angle-right"></i></span>
                         </span>
@@ -158,7 +199,7 @@
                         <div class="arrow-box"> <i class="fa-solid fa-angle-right"></i></div>
                     </div>
                 </div>
-                <div class="wines-sold">
+                <div class="wines-sold tab-item fade">
                     <div class="recipe-item">
                         <div class="recipe-info">
                         <h3>Most bought wine</h3>
@@ -240,8 +281,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="tab-item fade"></div>
+                <div class="mobile-view tabs-menu-box">
+                    <span class="tab" onclick="currentObj(1, 'tab')">Recent Wines</span>
+                    <span class="tab" onclick="currentObj(2, 'tab')">Recent Recipes</span>
+                    <span class="tab" onclick="currentObj(3, 'tab')">Demands</span>
+                </div>
                 <div class="graph-stats">
-                    <!-- TradingView Widget BEGIN -->
+                    
                     <div class="tradingview-widget-container">
                         <div id="tradingview_d992c"></div>
                         <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener" target="_blank"><span class="blue-text">Apple</span></a> by TradingView</div>
@@ -284,15 +331,23 @@
                         );
                         </script>
                     </div>
-                    <!-- TradingView Widget END -->
 
-                    <button class="comments">
+                    <button class="comments no-mobile">
                         Comments <i class="fa-solid fa-comments"></i>
                     </button>
                 </div>
             </section>
         </main>
     </div>
+    <div class="fixed-gap"></div>
+    <section class="bottom-menu-box mobile-view">
+        <div class="bottom-menu-wrap">
+            <a href="" class="bottom-menu-item"><i class="fa-solid fa-home"></i>Home</a>
+            <a href="" class="bottom-menu-item"><i class="fa-solid fa-bottle-droplet"></i></a>
+            <a href="" class="bottom-menu-item"><i class="fa-solid fa-store"></i></a>
+            <span href="" class="bottom-menu-item"><i class="fa-solid fa-user" onclick="openNav()"></i></span>
+        </div>
+    </section>
     <script src="js/main.js"></script>
 </body>
 </html>

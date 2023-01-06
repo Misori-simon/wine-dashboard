@@ -5,9 +5,10 @@
     outline: 0;
     margin: 0;
     padding: 0;
-
+    text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 /* utitlity clases */
 .flex {
@@ -28,12 +29,17 @@
     justify-content: space-between;
 }
 
+.mobile-view {
+    display: none;
+}
+
+
 /* utitility classes end */
+
 .main-box {
     display: flex;
     margin: 15px auto;
     padding: 10px;
-    border: 1px solid rgb(110, 110, 110);
     border-radius: 5px;
     max-width: 1200px;
 }
@@ -169,7 +175,6 @@ main {
 }
 
 .days-box {
-    width: 100%;
     margin: 10px;
     justify-content: space-between;
 }
@@ -211,7 +216,7 @@ main {
 
 .sales-card .card-title {
     margin-top: 20px;
-    font-size: 2em;
+    font-size: 200%;
 }
 
 .sales-card .card-sub-title {
@@ -222,7 +227,7 @@ main {
 .sales-card .amount {
     display: inline-block;
     padding-top: 10px;
-    font-size: 3em;
+    font-size: 250%;
     font-weight: bolder;
     position: relative;
     width: 80%;
@@ -240,6 +245,7 @@ main {
     padding: 8px;
     font-weight: bolder;
     background-color: black;
+    font-size: 80%;
     color:#fff;
     border-radius: 10px;
 }
@@ -306,7 +312,7 @@ main {
 }
 
 .new-recipe-btn  {
-    font-size: 1.1em;
+    font-size: 90%;
     font-weight: bolder;
     padding: 10px;
     border-radius: 10px;
@@ -317,7 +323,7 @@ main {
 .all-recipe {
     display: flex;
     text-transform: capitalize;
-    font-size: 1.1em;
+    font-size: 90%;
     font-weight: bolder;
     padding: 10px;
     border-radius: 10px;
@@ -328,7 +334,7 @@ main {
     display: flex;
     height: 20px;
     width: 20px;
-    margin-left: 1em;
+    margin-left: 0.5em;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -384,7 +390,7 @@ main {
     margin-top: 7px;
     margin-left: 7px;
     position: absolute;
-    z-index: 100;
+    z-index: 2;
     font-weight: 700;
     font-size: 0.8em;
 }
@@ -505,4 +511,293 @@ main {
 .comments .fa-solid {
     font-size: 1.5em;
     padding-left: 1em;
+}
+
+/* for mobile view styling */
+
+@media (max-width: 768px) {
+    /* utitlity clasess */
+    .no-mobile {
+        display: none;
+    }
+
+    .mobile-view {
+        display: unset;
+    }
+    /* untitlity clases end */
+
+    /* adjusting styles of elements in desktop */
+
+    .main-box {
+        flex-direction: column;
+    }
+
+    main {
+        width: 100%;
+        position: relative;
+    }
+
+    /* end of adjustments of styles in desktop view */
+
+    .mobile-nav-box {
+        width: 0;
+        height: 100%;
+        position: fixed; 
+        z-index: 4; 
+        top: 0; 
+        left: 0;
+        overflow: hidden; 
+        transition: 0.5s;
+        background-color: rgba(255, 255, 255, 0.034); 
+    }
+
+    .mobile-nav {
+        display: flex;
+        width: 80%;
+        max-width: 300px;
+        height: 100%;
+        flex-direction: column;
+        background-color: #ffffff;
+        margin-left: -10px;
+        padding: 15px 5%;
+        box-shadow: 2px 2px 4px 2px rgba(138, 138, 138, 0.227);
+    }
+
+
+    .profile-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 0px 30px;
+        width: 100;
+    }
+
+    .app-logo {
+        height: 50px;
+    }
+
+    .app-logo img {
+        height: 100%;
+    }
+
+    .nav-profile-photo {
+        height: 50px;
+    }
+
+    .nav-profile-photo img {
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .mobile-nav-item {
+        width: 90%;
+        padding: 10px 5%;
+        margin: 5px auto;
+        font-size: 1.2em;
+        border-radius: 10px;
+        background-color: #F2F2F2;
+        color: #8C8C8C;
+        transition: 0.3s;
+    }
+
+    .hr {
+        border-top: 2px solid #8C8C8C;
+        width: 100%;
+        height: 20px;
+        margin: 20px 0 0;
+    }
+
+    .mobile-nav-sub-title {
+        font-size: 1.5em;
+        margin: 0 0 20px;
+    }
+
+    /* for the carousel of top row cards*/
+    .top-row {
+        position: relative;
+        display: block;
+        padding: 0;
+        width: 100%;
+        max-width: 400px;
+        margin: auto
+    }
+
+    .slide-item {
+        display: none;
+        padding: 20px 5%;
+        width: 90%;
+    }
+
+    .sales-card .icon {
+        width: 65px;
+        height: 65px;
+        float: left;
+        margin-right: 30px;
+    }
+
+    .sales-card .icon .fa-solid {
+        font-size: 1.5em;
+    }
+
+    .sales-card .card-title {
+        display: inline;
+    }
+
+    .sales-card .amount {
+        width: 100%;
+    }
+
+    .view-wines-box {
+       display: block;
+    }
+
+    .view-wines {
+        display: none;
+    }
+
+    .amount .fa-solid{
+        position: unset;
+        font-size: unset;
+    }
+
+    .dics-box {
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .disc {
+        cursor: pointer;
+        height: 10px;
+        width: 20px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 10px;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active-disc {
+        width: 60px;
+        background-color: #FFD701;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    /* styling for the bottom row elements */
+
+    .bottom-row {
+        position: relative;
+        flex-direction: column-reverse;
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .wines-sold,
+    .recipe-box{
+        width: 90%;
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+
+    .graph-stats {
+        width: 100%;
+        text-align: center;
+    }
+
+    .recipe-box {
+        display: flex;
+    }
+
+    .tab-item {
+        display: none;
+    }
+
+    .tabs-menu-box {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .tab {
+        padding: 5px;
+        font-weight: bolder;
+        display: inline;
+    }
+
+    .active-tab {
+        border-bottom: 5px solid #FFD701;
+    }
+
+    .new-recipe-btn {
+        color: #fff;
+        background-color: #FFD701;
+        font-size: 1em;
+    }
+
+    .all-recipe {
+        background-color: unset;
+        font-size: 1em;
+    }
+
+    .all-recipe .cirlcle-outline {
+        background-color: #FFD701;
+        border-color: #FFD701;
+    }
+
+    .move-to-last {
+        order: 1;
+    }
+
+    .all-wines-box {
+        display: none;
+    }
+
+    .fixed-gap {
+        margin-bottom: 50px;
+    }
+
+    .bottom-menu-box {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 3;
+        box-shadow: 0 -2px 4px 2px rgba(138, 138, 138, 0.227);
+
+    }
+
+    .bottom-menu-wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 400px;
+        margin: auto;
+        background-color: #fff;
+    }
+
+    .bottom-menu-item {
+        display: inline-block;
+        padding: 10px 20px 15px;
+        font-size: 130%;
+        border-radius: 10px;
+        color: #000;
+    }
+
+    .bottom-menu-item:hover, 
+    .bottom-menu-item:active {
+        background-color: #FFEB80;
+    }
+
+    .bottom-menu-item .fa-home {
+        margin-right: 10px;
+    }
+
 }
