@@ -216,7 +216,7 @@ main {
 
 .sales-card .card-title {
     margin-top: 20px;
-    font-size: 2em;
+    font-size: 200%;
 }
 
 .sales-card .card-sub-title {
@@ -227,7 +227,7 @@ main {
 .sales-card .amount {
     display: inline-block;
     padding-top: 10px;
-    font-size: 3em;
+    font-size: 250%;
     font-weight: bolder;
     position: relative;
     width: 80%;
@@ -245,6 +245,7 @@ main {
     padding: 8px;
     font-weight: bolder;
     background-color: black;
+    font-size: 80%;
     color:#fff;
     border-radius: 10px;
 }
@@ -311,7 +312,7 @@ main {
 }
 
 .new-recipe-btn  {
-    font-size: 1.1em;
+    font-size: 90%;
     font-weight: bolder;
     padding: 10px;
     border-radius: 10px;
@@ -322,7 +323,7 @@ main {
 .all-recipe {
     display: flex;
     text-transform: capitalize;
-    font-size: 1.1em;
+    font-size: 90%;
     font-weight: bolder;
     padding: 10px;
     border-radius: 10px;
@@ -333,7 +334,7 @@ main {
     display: flex;
     height: 20px;
     width: 20px;
-    margin-left: 1em;
+    margin-left: 0.5em;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
