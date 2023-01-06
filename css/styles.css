@@ -9,6 +9,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 /* utitlity clases */
 .flex {
     display: flex;
@@ -32,13 +33,13 @@
     display: none;
 }
 
+
 /* utitility classes end */
 
 .main-box {
     display: flex;
     margin: 15px auto;
     padding: 10px;
-    border: 1px solid rgb(110, 110, 110);
     border-radius: 5px;
     max-width: 1200px;
 }
@@ -532,6 +533,7 @@ main {
 
     main {
         width: 100%;
+        position: relative;
     }
 
     /* end of adjustments of styles in desktop view */
@@ -685,10 +687,6 @@ main {
 
     /* styling for the bottom row elements */
 
-    .gap{
-        height: 500px; 
-    }
-
     .bottom-row {
         position: relative;
         flex-direction: column-reverse;
@@ -697,10 +695,18 @@ main {
     }
 
     .wines-sold,
-    .recipe-box,
-    .graph-stats {
+    .recipe-box{
         width: 90%;
-        padding: 10 5%;
+        padding: 10px 5%;
+    }
+
+    .graph-stats {
+        width: 100%;
+        text-align: center;
+    }
+
+    .recipe-box {
+        display: flex;
     }
 
     .tab-item {
@@ -720,6 +726,62 @@ main {
 
     .active-tab {
         border-bottom: 2px solid red;
+    }
+
+    .new-recipe-btn {
+        color: #fff;
+        background-color: #FFD701;
+    }
+
+    .all-recipe {
+        background-color: unset;
+    }
+
+    .all-recipe .cirlcle-outline {
+        background-color: #FFD701;
+        border-color: #FFD701;
+    }
+
+    /* .move-to-last {
+
+    } */
+
+    .all-wines-box {
+        display: none;
+    }
+
+    .fixed-gap {
+        margin-bottom: 50px;
+    }
+
+    .bottom-menu-box {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .bottom-menu-wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .bottom-menu-item {
+        display: inline-block;
+        padding: 10px 20px 15px;
+        font-size: 130%;
+        border-radius: 10px;
+        color: #000;
+    }
+
+    .bottom-menu-item:hover, 
+    .bottom-menu-item:active {
+        background-color: #FFEB80;
+    }
+
+    .bottom-menu-item .fa-home {
+        margin-right: 10px;
     }
 
 }
