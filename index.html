@@ -10,39 +10,40 @@
 </head>
 <body>
     <div class="main-box">
-        <nav id="mobile-nav" class="mobile-view mobile-nav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="profile-box">
-                <span class="app-logo"><img src="images/logo.jpg" alt=""></span>
-                <span class="nav-profile-photo"><a href=""><img src="images/profile/profile-photo.png" alt=""></a></span>
-            </div>
-            <a href="http://" class="mobile-nav-item">
-                <i class="fa-solid fa-home"></i> Home
-            </a>
-            <a href="http://" class="mobile-nav-item">
-                <i class="fa-solid fa-customers"></i> Customers
-            </a>
-            <a href="http://" class="mobile-nav-item">
-                <i class="fa-solid fa-list-ul"></i> Orders
-            </a>
-            <a href="http://" class="mobile-nav-item">
-                <i class="fa-solid fa-bottle"></i> Wine Management
-            </a>
-            <div class="hr"></div>
-            <p class="mobile-nav-sub-title">Account</p>
-            <a href="http://" class="mobile-nav-item">
-                <i class="fa-solid fa-home"></i> Messages
-            </a>
-            <a href="http://" class="mobile-nav-item">
-                <i class="fa-solid fa-bell"></i> Notifications
-            </a>
-            <a href="http://" class="mobile-nav-item">
-                <i class="fa-solid fa-gear"></i> Settings
-            </a>
-            <a href="http://" class="mobile-nav-item">
-                <i class="fa-solid fa-power-off"></i> logout
-            </a>
-        </nav>
+        <div id="mobile-nav" class="mobile-nav-box" onclick="closeNav()">
+            <nav class="mobile-view mobile-nav">
+                <div class="profile-box">
+                    <span class="app-logo"><img src="images/logo.jpg" alt=""></span>
+                    <span class="nav-profile-photo"><a href=""><img src="images/profile/profile-photo.png" alt=""></a></span>
+                </div>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-home"></i> Home
+                </a>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-customers"></i> Customers
+                </a>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-list-ul"></i> Orders
+                </a>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-bottle"></i> Wine Management
+                </a>
+                <div class="hr"></div>
+                <p class="mobile-nav-sub-title">Account</p>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-home"></i> Messages
+                </a>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-bell"></i> Notifications
+                </a>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-gear"></i> Settings
+                </a>
+                <a href="http://" class="mobile-nav-item">
+                    <i class="fa-solid fa-power-off"></i> logout
+                </a>
+            </nav>
+        </div>
         <aside class="sidebar no-mobile">
             <div class="logo-box">
                 <span class="logo">
@@ -287,7 +288,7 @@
                     <span class="tab" onclick="currentTab(3)">Demands</span>
                 </div>
                 <div class="graph-stats">
-                    <!-- TradingView Widget BEGIN -->
+                    <!-- 
                     <div class="tradingview-widget-container">
                         <div id="tradingview_d992c"></div>
                         <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener" target="_blank"><span class="blue-text">Apple</span></a> by TradingView</div>
@@ -330,7 +331,7 @@
                         );
                         </script>
                     </div>
-                    <!-- TradingView Widget END -->
+                    TradingView Widget END -->
 
                     <button class="comments no-mobile">
                         Comments <i class="fa-solid fa-comments"></i>
@@ -345,7 +346,7 @@
             <a href="" class="bottom-menu-item"><i class="fa-solid fa-home"></i>Home</a>
             <a href="" class="bottom-menu-item"><i class="fa-solid fa-bottle-droplet"></i></a>
             <a href="" class="bottom-menu-item"><i class="fa-solid fa-store"></i></a>
-            <a href="" class="bottom-menu-item"><i class="fa-solid fa-store"></i></a>
+            <span href="" class="bottom-menu-item"><i class="fa-solid fa-store" onclick="openNav()"></i></span>
         </div>
     </section>
     <script src="js/main.js"></script>
