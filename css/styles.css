@@ -174,7 +174,6 @@ main {
 }
 
 .days-box {
-    width: 100%;
     margin: 10px;
     justify-content: space-between;
 }
@@ -531,10 +530,14 @@ main {
         flex-direction: column;
     }
 
+    main {
+        width: 100%;
+    }
+
     /* end of adjustments of styles in desktop view */
 
     .mobile-nav {
-        display: flex;
+        display: none;
         max-width: 300px;
         width: 90%;
         height: 100%;
@@ -597,6 +600,88 @@ main {
     .mobile-nav-sub-title {
         font-size: 1.5em;
         margin: 0 0 20px;
+    }
+
+    /* for the carousel of top row cards*/
+    .top-row {
+        position: relative;
+        display: block;
+        padding: 0;
+        width: 100%;
+        max-width: 400px;
+        margin: auto
+    }
+
+    .demand-stats,
+    .sales-card {
+        display: none;
+        padding: 20px 5%;
+        width: 90%;
+    }
+
+    .sales-card .icon {
+        width: 65px;
+        height: 65px;
+        float: left;
+        margin-right: 30px;
+    }
+
+    .sales-card .icon .fa-solid {
+        font-size: 1.5em;
+    }
+
+    .sales-card .card-title {
+        display: inline;
+    }
+
+    .sales-card .amount {
+        width: 100%;
+    }
+
+    .view-wines-box {
+       display: block;
+    }
+
+    .view-wines {
+        display: none;
+    }
+
+    .amount .fa-solid{
+        position: unset;
+        font-size: unset;
+    }
+
+    .dics-box {
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .disc {
+        cursor: pointer;
+        height: 10px;
+        width: 20px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 10px;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active-disc {
+        width: 60px;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
     }
 
 }

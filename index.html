@@ -116,7 +116,7 @@
         </aside>
         <main>
             <section class="top-row">
-                <div class="demand-stats">
+                <div class="demand-stats slide-item fade">
                     <div>
                         <button class="new-wine"> New Wine <i class="fa-solid fa-plus"></i></button>
                     </div>
@@ -140,28 +140,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="sales-card sales">
+                <div class="sales-card sales slide-item fade">
                     <span class="icon"><i class="fa-solid fa-bolt-lightning"></i></span>
                     <h3 class="card-title">Sales</h3>
                     <p class="card-sub-title">(300 - 500 sales) </p>
                     <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 4000</span>
                 </div>
-                <div class="sales-card revenue">
+                <div class="sales-card revenue slide-item fade">
                     <span class="icon"><i class="fa-solid fa-dollar-sign"></i></span>
                     <h3 class="card-title">Total Revenue</h3>
                     <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 5000</span>
                 </div>
-                <div class="sales-card stock">
-                    <div class="flex space-btw">
+                <div class="sales-card stock slide-item fade">
+                    <div class="flex space-btw view-wines-box">
                         <span class="icon"><i class="fa-solid fa-store"></i></span>
                         <span class="view-wines"> view wines</span>
                     </div>
                     <h3 class="card-title">In Stock</h3>
                     <span class="amount"><i class="fa-solid fa-dollar-sign"></i> 1000</span>
                 </div>
+                <div class="mobile-view dics-box">
+                    <span class="disc" onclick="currentSlide(1)"></span>
+                    <span class="disc" onclick="currentSlide(2)"></span>
+                    <span class="disc" onclick="currentSlide(3)"></span>
+                    <span class="disc" onclick="currentSlide(4)"></span>
+                </div>
             </section>
             <section class="bottom-row">
-                <div class="recipe-box">
+                <div class="mobile-view tabs-menu-box">
+                    <span class="tab" onclick="currentTab(1)">Recent Wines</span>
+                    <span class="tab" onclick="currentTab(2)">Recent Recipes</span>
+                    <span class="tab" onclick="currentTab(3)">Demands</span>
+                </div>
+                <div class="recipe-box tab-item">
                     <div class="flex space-btw">
                             <button class="new-recipe-btn"> New Recipe <i class="fa-solid fa-plus"></i></button>
                         <span class="all-recipe">
@@ -191,7 +202,7 @@
                         <div class="arrow-box"> <i class="fa-solid fa-angle-right"></i></div>
                     </div>
                 </div>
-                <div class="wines-sold">
+                <div class="wines-sold tab-item">
                     <div class="recipe-item">
                         <div class="recipe-info">
                         <h3>Most bought wine</h3>
