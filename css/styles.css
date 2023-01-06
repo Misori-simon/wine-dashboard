@@ -612,8 +612,7 @@ main {
         margin: auto
     }
 
-    .demand-stats,
-    .sales-card {
+    .slide-item {
         display: none;
         padding: 20px 5%;
         width: 90%;
@@ -682,6 +681,45 @@ main {
     @keyframes fade {
         from {opacity: .4}
         to {opacity: 1}
+    }
+
+    /* styling for the bottom row elements */
+
+    .gap{
+        height: 500px; 
+    }
+
+    .bottom-row {
+        position: relative;
+        flex-direction: column-reverse;
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .wines-sold,
+    .recipe-box,
+    .graph-stats {
+        width: 90%;
+        padding: 10 5%;
+    }
+
+    .tab-item {
+        display: none;
+    }
+
+    .tabs-menu-box {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .tab {
+        padding: 5px;
+        font-weight: bolder;
+        display: inline;
+    }
+
+    .active-tab {
+        border-bottom: 2px solid red;
     }
 
 }

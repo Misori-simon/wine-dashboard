@@ -167,12 +167,8 @@
                 </div>
             </section>
             <section class="bottom-row">
-                <div class="mobile-view tabs-menu-box">
-                    <span class="tab" onclick="currentTab(1)">Recent Wines</span>
-                    <span class="tab" onclick="currentTab(2)">Recent Recipes</span>
-                    <span class="tab" onclick="currentTab(3)">Demands</span>
-                </div>
-                <div class="recipe-box tab-item">
+                
+                <div class="recipe-box tab-item fade">
                     <div class="flex space-btw">
                             <button class="new-recipe-btn"> New Recipe <i class="fa-solid fa-plus"></i></button>
                         <span class="all-recipe">
@@ -202,7 +198,7 @@
                         <div class="arrow-box"> <i class="fa-solid fa-angle-right"></i></div>
                     </div>
                 </div>
-                <div class="wines-sold tab-item">
+                <div class="wines-sold tab-item fade">
                     <div class="recipe-item">
                         <div class="recipe-info">
                         <h3>Most bought wine</h3>
@@ -284,6 +280,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="tab-item fade"></div>
+                <div class="mobile-view tabs-menu-box">
+                    <span class="tab" onclick="currentTab(1)">Recent Wines</span>
+                    <span class="tab" onclick="currentTab(2)">Recent Recipes</span>
+                    <span class="tab" onclick="currentTab(3)">Demands</span>
+                </div>
                 <div class="graph-stats">
                     <!-- TradingView Widget BEGIN -->
                     <div class="tradingview-widget-container">
@@ -330,11 +332,12 @@
                     </div>
                     <!-- TradingView Widget END -->
 
-                    <button class="comments">
+                    <button class="comments no-mobile">
                         Comments <i class="fa-solid fa-comments"></i>
                     </button>
                 </div>
             </section>
+            <div class="gap"></div>
         </main>
     </div>
     <script src="js/main.js"></script>
