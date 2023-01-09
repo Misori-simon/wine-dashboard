@@ -41,7 +41,6 @@
     margin: 15px auto;
     padding: 10px;
     border-radius: 5px;
-    max-width: 1200px;
 }
 
 /* styling for the side bar begins here */
@@ -618,7 +617,6 @@ main {
         display: block;
         padding: 0;
         width: 100%;
-        max-width: 400px;
         margin: auto
     }
 
@@ -699,7 +697,6 @@ main {
     .bottom-row {
         position: relative;
         flex-direction: column-reverse;
-        max-width: 400px;
         margin: auto;
     }
 
