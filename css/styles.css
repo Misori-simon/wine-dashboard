@@ -46,8 +46,7 @@ body {
 
 .main-box {
     display: flex;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 15px 20px;
 }
 
 /* styling for the side bar begins here */
@@ -140,7 +139,7 @@ body {
 }
 
 main {
-    width: 77%;
+    width: 100%;
 }
 
 
@@ -551,7 +550,7 @@ main {
 
 .chart-box {
     position: relative;
-    height: 90%;
+    height: 85%;
     max-height: 400px;
     width: 100%;
 }
@@ -771,7 +770,6 @@ main {
 
     .chart-box {
         height: 200px;
-
         margin-bottom: 30px;
     }
 
@@ -863,14 +861,13 @@ main {
     .bottom-menu-wrap {
         display: flex;
         justify-content: space-between;
-        max-width: 400px;
-        margin: auto;
+        width: 100%;
         background-color: #fff;
     }
 
     .bottom-menu-item {
         display: inline-block;
-        padding: 10px 20px 15px;
+        padding: 10px 25px 15px;
         font-size: 1.8rem;
         border-radius: 10px;
         color: #000;
