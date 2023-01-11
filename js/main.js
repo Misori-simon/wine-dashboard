@@ -1,5 +1,6 @@
-
 let index = 1;
+
+let ctx = document.getElementById('myChart');
 
 let tab = {
     objClassName: "tab-item",
@@ -15,7 +16,34 @@ let slide = {
     displayValue: "block"
 }
 
+let wineData = {
+      labels:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+      title: {
+        text: "Total Sales & Demand Volume",
+        fontSize: 20,
+        display: true
+      },
+      wines: [
+            {
+                label: 'Total Sales',
+                borderColor: 'rgb(75, 192, 192)',
+                backgroundColor: 'rgb(75, 192, 192)',
+                data: [0, 10, 30, 32, 65, 70, 420, 600],
+                fill: false
+            },
+            {
+                label: 'Demand Volume',
+                borderColor: 'rgb(75, 75, 192)',
+                backgroundColor: 'rgb(75, 75, 192)',
+                data: [0, 10, 10, 59, 15, 5, 70, 20, ],
+                fill: false
+            }
+        ]
+    }
+
 mediaScreenChange()
+
+makeChart()
 
 function mediaScreenChange() {
     if (window.innerWidth < 768) {
@@ -69,4 +97,26 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("mobile-nav").style.width = "0"
+}
+
+function makeChart() {
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: wineData.labels,
+            datasets: wineData.wines
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: wineData.title.display,
+                    text: wineData.title.text,
+                    font: {
+                        size: wineData.title.fontSize,
+                    },
+                },
+            },
+        },
+
+    });
 }

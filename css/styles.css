@@ -497,6 +497,10 @@ main {
     justify-content: space-between;
 }
 
+.chart-box {
+    height: 80%;
+}
+
 .graph-stats .comments {
     align-self: flex-end;
     border: 2px solid #FFD701;
