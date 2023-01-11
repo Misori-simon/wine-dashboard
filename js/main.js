@@ -20,7 +20,7 @@ let wineData = {
       labels:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
       title: {
         text: "Total Sales & Demand Volume",
-        fontSize: 20,
+        fontSize: 16,
         display: true
       },
       wines: [
@@ -52,7 +52,7 @@ function mediaScreenChange() {
     showObJ(index, ...Object.values(slide));
   } else {
     resetObjs(tab.objClassName)
-    resetObjs(slide.objClassName)
+    resetObjs(slide.objClassName, "flex")
   }
 }
 
@@ -84,10 +84,10 @@ function showObJ(index, objClassName, controlClassName, activeClass, displayValu
     objControls[index-1].className += activeClass;
 }
 
-function resetObjs(objClassName) {
+function resetObjs(objClassName, resetvalue="unset") {
     let tabs = document.getElementsByClassName(objClassName);
     for (i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "unset";
+        tabs[i].style.display = resetvalue;
     }
 }
 
