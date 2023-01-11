@@ -1,5 +1,6 @@
-
 let index = 1;
+
+let ctx = document.getElementById('myChart');
 
 let tab = {
     objClassName: "tab-item",
@@ -15,7 +16,34 @@ let slide = {
     displayValue: "block"
 }
 
+let wineData = {
+      labels:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+      title: {
+        text: "Total Sales & Demand Volume",
+        fontSize: 16,
+        display: true
+      },
+      wines: [
+            {
+                label: 'Total Sales',
+                borderColor: 'rgb(75, 192, 192)',
+                backgroundColor: 'rgb(75, 192, 192)',
+                data: [0, 10, 30, 32, 65, 70, 420, 600],
+                fill: false
+            },
+            {
+                label: 'Demand Volume',
+                borderColor: 'rgb(75, 75, 192)',
+                backgroundColor: 'rgb(75, 75, 192)',
+                data: [0, 10, 10, 59, 15, 5, 70, 20, ],
+                fill: false
+            }
+        ]
+    }
+
 mediaScreenChange()
+
+makeChart()
 
 function mediaScreenChange() {
     if (window.innerWidth < 768) {
@@ -24,7 +52,7 @@ function mediaScreenChange() {
     showObJ(index, ...Object.values(slide));
   } else {
     resetObjs(tab.objClassName)
-    resetObjs(slide.objClassName)
+    resetObjs(slide.objClassName, "flex")
   }
 }
 
@@ -56,10 +84,10 @@ function showObJ(index, objClassName, controlClassName, activeClass, displayValu
     objControls[index-1].className += activeClass;
 }
 
-function resetObjs(objClassName) {
+function resetObjs(objClassName, resetvalue="unset") {
     let tabs = document.getElementsByClassName(objClassName);
     for (i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "unset";
+        tabs[i].style.display = resetvalue;
     }
 }
 
@@ -69,4 +97,26 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("mobile-nav").style.width = "0"
+}
+
+function makeChart() {
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: wineData.labels,
+            datasets: wineData.wines
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: wineData.title.display,
+                    text: wineData.title.text,
+                    font: {
+                        size: wineData.title.fontSize,
+                    },
+                },
+            },
+        },
+
+    });
 }

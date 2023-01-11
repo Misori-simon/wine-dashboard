@@ -9,6 +9,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #F4F4F4;
+
+}
 
 /* utitlity clases */
 .flex {
@@ -38,8 +46,7 @@
 
 .main-box {
     display: flex;
-    margin: 15px auto;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
 }
 
@@ -49,6 +56,7 @@
     display: block;
     height: inherit;
     width: 23%;
+    max-width: 300px;
     margin-right: 20px;
 }
 
@@ -70,10 +78,10 @@
 }
 
 .sibebar-card {
-    margin: 10px 0;
+    margin: 15px 0;
     padding: 5px;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px rgba(138, 138, 138, 0.227);
+    background-color: #fff;
 }
 
 .profile-data {
@@ -93,12 +101,12 @@
 }
 
 .username {
-    font-size: 1em;
+    font-size: 1.9rem;
     font-weight: bolder;
 }
 
 .user-email {
-    font-size: .8em;
+    font-size: 1.5em;
     color:rgb(151, 151, 151);
 }
 
@@ -107,26 +115,28 @@
     display: flex;
     justify-content:space-between;
     border-radius: 5px;
+    background-color: #fff;
+    color: #949494;
 }
 
 .name {
     display: flex;
     text-transform: capitalize;
     align-items:center;
-    font-size: 0.9em;
+    font-size: 1.3rem;
 }
 
 .sidebar-card-item .fa-solid {
-    font-size: 1.3em;
-    color: rgb(66, 66, 66);
+    font-size: 1.5rem;
+    color: #949494;
 }
 
 .arrow .fa-solid {
-    font-size: 1em;
+    font-size: 1.5rem;
 }
 
 .sidebar-card-item:hover {
-    background-color: rgb(185, 185, 185);
+    background-color: #F4F4F4;;
 }
 
 main {
@@ -146,20 +156,28 @@ main {
 
 .top-row {
     border: 1px solid rgba(138, 138, 138, 0.2);
+    background-color: #fff;
+    min-height: 250px;
 }
 
 .demand-stats {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     width: 30%;
     padding: 10px;
+    font-size: 1.5rem;
 }
 
 .new-wine {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 130px;
     padding: 10px;
-    background: rgb(224, 192, 9);
-    font-weight: bolder;
-    font-size: 0.7em;
+    background: #FFD701;
+    font-size: 1.3rem;
     border-radius: 20px;
-    box-shadow: 2px 2px 2px  rgb(134, 134, 134);
 }
 
 .new-wine .fa-solid {
@@ -170,7 +188,7 @@ main {
     margin: 10px 0;
     text-align: center;
     color:rgb(20, 20, 20);
-    font-weight: bolder;
+    font-size: bold;
 }
 
 .days-box {
@@ -179,7 +197,6 @@ main {
 }
 
 .day {
-    font-size: 0.8em;
     color: grey;
 }
 
@@ -197,7 +214,10 @@ main {
 /* sales card styling */
 
 .sales-card {
-    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 15px 25px;
     border-radius: 10px;
     width: 18%;
 }
@@ -208,43 +228,42 @@ main {
     align-items: center;
     height: 40px;
     width: 40px;
-    font-size: 1.2em;
+    font-size: 1.5rem;
     color: white;
     border-radius: 11px;
 }
 
 .sales-card .card-title {
     margin-top: 20px;
-    font-size: 200%;
+    font-size: 2rem;
+    color: #6A6A6A;
 }
 
 .sales-card .card-sub-title {
-    font-size: 0.9em;
-    font-weight: bolder;
+    font-size: 1.2rem;
 }
 
 .sales-card .amount {
-    display: inline-block;
-    padding-top: 10px;
-    font-size: 250%;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
     font-weight: bolder;
-    position: relative;
-    width: 80%;
-    text-align: right;
 }
 
 .amount .fa-solid {
     font-size: 0.5em;
-    position: absolute;
-    top: 20px;
-    left: 1px;
+    padding-right: 0.5rem;
 }
 
 .view-wines {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 90px;
     padding: 8px;
-    font-weight: bolder;
     background-color: black;
-    font-size: 80%;
+    font-size: 1.2rem;
     color:#fff;
     border-radius: 10px;
 }
@@ -278,21 +297,44 @@ main {
 }
 
 /* styling of bottom row */
-.recipe-box,
+.recipe-box {
+    margin: 10px 0;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 25%;
+    background-color: #fff;
+    align-self: flex-start;
+}
+
 .wines-sold {
     margin: 10px 0;
-    padding: 5px 20px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px rgba(138, 138, 138, 0.227);
+    padding: 10px 20px;
+    border-radius: 10px;
     width: 28%;
+    background-color: #fff;
+    align-self: flex-start;
 }
 
 .recipe-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.3em 0;
+    padding: 1.5rem 0;
     text-transform: capitalize;
+}
+
+.recipe-item .arrow-box {
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.recipe-box .recipe-item {
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.recipe-box .recipe-item:hover {
+    background-color: #EBEBEB;
 }
 
 .round-circle {
@@ -311,8 +353,11 @@ main {
 }
 
 .new-recipe-btn  {
-    font-size: 90%;
-    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    font-size: 1.2rem;
     padding: 10px;
     border-radius: 10px;
     border: 2px solid #FFD701 ;
@@ -321,8 +366,11 @@ main {
 
 .all-recipe {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     text-transform: capitalize;
-    font-size: 90%;
+    font-size: 1.2rem;
+    width: 30%;
     font-weight: bolder;
     padding: 10px;
     border-radius: 10px;
@@ -338,21 +386,24 @@ main {
     align-items: center;
     border-radius: 50%;
     font-size: 0.9em;
-    border: 2px solid #000;
+    background-color: #000;
+    color: #FFD701;
 }
 
-.recipe-box h3 {
-    padding: 1.5em 0;
+.recipe-box h3,
+.recipe-item h3 {
+    padding: 1.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 500;
 }
 
 .recipe-name {
-    font-weight: bolder;
-    font-size: 1.2em;
+    font-size: 1.6rem;
 }
 
 .recipe-group {
-    font-size: 0.9em;
-    color:rgb(66, 66, 66);
+    font-size: 1.2rem;
+    color: #949494;
     margin-top: -5px;
 }
 
@@ -391,7 +442,7 @@ main {
     position: absolute;
     z-index: 2;
     font-weight: 700;
-    font-size: 0.8em;
+    font-size: 1.3rem;
 }
 
 /* color animation */
@@ -483,19 +534,28 @@ main {
     bottom: -60px;
     left: 50%;
     text-transform: uppercase;
-    font-weight: bolder;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .down-arrow {
-    font-size: 1.5em;
+    font-size: 2rem;
 }
 
 .graph-stats {
-    width: 28%;
+    width: 31%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
+.chart-box {
+    position: relative;
+    height: 90%;
+    max-height: 400px;
+    width: 100%;
+}
+
 
 .graph-stats .comments {
     align-self: flex-end;
@@ -503,13 +563,13 @@ main {
     padding: 15px 20px;
     border-radius: 10px;
     font-weight: bolder;
-    font-size: 1em;
+    font-size: 1.5em;
     background: none;
 }
 
 .comments .fa-solid {
-    font-size: 1.5em;
-    padding-left: 1em;
+    font-size: 1.5rem;
+    padding-left: 1rem;
 }
 
 /* for mobile view styling */
@@ -527,6 +587,9 @@ main {
 
     /* adjusting styles of elements in desktop */
 
+    body {
+        background-color: #fff;
+    }
     .main-box {
         flex-direction: column;
     }
@@ -592,7 +655,7 @@ main {
         width: 90%;
         padding: 10px 5%;
         margin: 5px auto;
-        font-size: 1.2em;
+        font-size: 1.5rem;
         border-radius: 10px;
         background-color: #F2F2F2;
         color: #8C8C8C;
@@ -607,7 +670,7 @@ main {
     }
 
     .mobile-nav-sub-title {
-        font-size: 1.5em;
+        font-size: 1.8rem;
         margin: 0 0 20px;
     }
 
@@ -617,7 +680,14 @@ main {
         display: block;
         padding: 0;
         width: 100%;
-        margin: auto
+        margin: auto;
+        min-height: unset;
+        border: none;
+    }
+
+    .demand-stats {
+        border: 1px solid rgba(187, 187, 187, 0.3);
+        border-radius: 10px;
     }
 
     .slide-item {
@@ -627,22 +697,26 @@ main {
     }
 
     .sales-card .icon {
-        width: 65px;
-        height: 65px;
+        width: 50;
+        height: 50;
         float: left;
         margin-right: 30px;
     }
 
     .sales-card .icon .fa-solid {
-        font-size: 1.5em;
+        font-size: 1.8rem;
     }
 
     .sales-card .card-title {
         display: inline;
+        padding: 10px 0;
     }
 
     .sales-card .amount {
+        padding: 2.5rem 0;
         width: 100%;
+        text-align: center;
+        font-size: 3rem;
     }
 
     .view-wines-box {
@@ -651,11 +725,6 @@ main {
 
     .view-wines {
         display: none;
-    }
-
-    .amount .fa-solid{
-        position: unset;
-        font-size: unset;
     }
 
     .dics-box {
@@ -700,6 +769,12 @@ main {
         margin: auto;
     }
 
+    .chart-box {
+        height: 200px;
+
+        margin-bottom: 30px;
+    }
+
     .wines-sold,
     .recipe-box{
         width: 90%;
@@ -710,6 +785,7 @@ main {
     .graph-stats {
         width: 100%;
         text-align: center;
+        border: 1px solid rgba(187, 187, 187, 0.2);
     }
 
     .recipe-box {
@@ -718,6 +794,8 @@ main {
 
     .tab-item {
         display: none;
+        border: 1px solid rgba(187, 187, 187, 0.2);
+        box-shadow: 0 5px 3px -3px#bbb;
     }
 
     .tabs-menu-box {
@@ -727,27 +805,37 @@ main {
 
     .tab {
         padding: 5px;
-        font-weight: bolder;
+        font-weight: 500;
         display: inline;
+        font-size: 1.5rem;
     }
 
     .active-tab {
         border-bottom: 5px solid #FFD701;
     }
 
+    .recipe-box .recipe-item:last-child {
+        margin-bottom: 15px;
+    }
+
     .new-recipe-btn {
         color: #fff;
         background-color: #FFD701;
-        font-size: 1em;
+        font-size: 1.2rem;
+        font-weight: 500;
+        max-width: 80px;
     }
 
     .all-recipe {
         background-color: unset;
-        font-size: 1em;
+        font-size: 1.5rem;
+        font-weight: 500;
+        max-width: 50px;
     }
 
     .all-recipe .cirlcle-outline {
         background-color: #FFD701;
+        color: #000;
         border-color: #FFD701;
     }
 
@@ -768,7 +856,7 @@ main {
         bottom: 0;
         width: 100%;
         z-index: 3;
-        box-shadow: 0 -2px 4px 2px rgba(138, 138, 138, 0.227);
+        box-shadow: 0 -5px 3px -3px#bbb;
 
     }
 
@@ -783,7 +871,7 @@ main {
     .bottom-menu-item {
         display: inline-block;
         padding: 10px 20px 15px;
-        font-size: 130%;
+        font-size: 1.8rem;
         border-radius: 10px;
         color: #000;
     }
